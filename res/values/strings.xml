@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Auto Fare/Complaint Mumbai</string>
+    <string name="menu_settings">Settings</string>
+    
+    <string name="help_content"><b>Fare Calculator:</b>\nUse the + and - buttons to enter the auto-rickshaw meter
+         reading. The corresponding regular fare and night fare is displayed.
+          This app will help you determine if the driver is overcharging.\nThe values of the meter reading are as per the latest
+           CNG FUEL AUTORICKSHAW TARIFF CARD FOR MMRTA REGION MUMBAI SUBURBAN REGION WITH EFFECT FROM 20 APRIL 2012 \n<b>Complaint:</b> \nUse the complaint form to lodge a complaint with the Mumbai Traffic police. \n<u>Note:</u> \nThe app form only submits the form data to the official complaint form on the Traffic Police Website.
+            <i>http://trafficpolicemumbai.org/Complaint_Auto_taxi_form.htm</i> \nThe author of this app holds no responsibilty towards the form data sent by this app and the actions
+             taken in response to them.</string></resources>

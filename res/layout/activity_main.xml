@@ -1,0 +1,528 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.google.ads.AdView
+        android1:id="@+id/adView"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="a150391dd653db8"
+        ads:loadAdOnCreate="true"
+         >
+    </com.google.ads.AdView>
+
+    <TabWidget
+        android:id="@android:id/tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+    </TabWidget>
+
+    <FrameLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         >
+
+        <!-- TAB 1 STARTS -->
+
+        <LinearLayout
+            android1:id="@+id/tab1"
+            android1:layout_width="fill_parent"
+            android1:layout_height="fill_parent"
+            android1:orientation="vertical"
+             >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle"
+                android:fillViewport="true" >
+
+                <LinearLayout
+                    android1:id="@+id/LinearLayout1"
+                    android1:layout_width="fill_parent"
+                    android1:layout_height="wrap_content"
+                    android1:gravity="fill_vertical|fill_horizontal"
+                    android1:orientation="vertical" >
+
+                    
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content"
+                        android1:gravity="center"
+                        android1:padding="10dp" >
+
+                        <Button
+                            android1:id="@+id/leftup"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="match_parent"
+                            android1:layout_weight="1"
+                            android1:onClick="callleftup"
+                            android1:padding="20dp"
+                            android1:text="    +    "
+                            android1:textStyle="bold" />
+
+                        <Button
+                            android1:id="@+id/rightup"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="match_parent"
+                            android1:layout_weight="1"
+                            android1:onClick="callrightup"
+                            android1:padding="20dp"
+                            android1:text="    +    "
+                            android1:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content"
+                        android1:gravity="center"
+                        android1:padding="10dp" >
+
+                        <TextView
+                            android1:id="@+id/lefttext"
+                            android1:layout_width="75dp"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:ems="10"
+                            android1:gravity="center_horizontal"
+                            android1:padding="5dp"
+                            android1:text="1"
+                            android1:textColor="@color/red"
+                            android1:textSize="25dp"
+                            android1:textStyle="bold" />
+
+                        <TextView
+                            android1:id="@+id/righttext"
+                            android1:layout_width="78dp"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:ems="10"
+                            android1:gravity="center_horizontal"
+                            android1:padding="5dp"
+                            android1:text="00"
+                            android1:textColor="@color/red"
+                            android1:textSize="25dp"
+                            android1:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content"
+                        android1:gravity="center"
+                        android1:padding="10dp" >
+
+                        <Button
+                            android1:id="@+id/leftdown"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="match_parent"
+                            android1:layout_weight="1"
+                            android1:onClick="callleftdown"
+                            android1:padding="20dp"
+                            android1:text="    -    "
+                            android1:textStyle="bold" />
+
+                        <Button
+                            android1:id="@+id/rightdown"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="match_parent"
+                            android1:layout_weight="1"
+                            android1:onClick="callrightdown"
+                            android1:padding="20dp"
+                            android1:text="    -    "
+                            android1:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content"
+                        android1:gravity="center"
+                        android1:padding="5dp" >
+
+                        <TextView
+                            android1:id="@+id/reg_title"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:gravity="center"
+                            android1:text="Regular Fare (Rs.)" />
+
+                        <TextView
+                            android1:id="@+id/resultreg"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:text="12.00"
+                            android1:textAppearance="?android:attr/textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content"
+                        android1:gravity="center"
+                        android1:padding="5dp" >
+
+                        <TextView
+                            android1:id="@+id/night_title"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:gravity="center"
+                            android1:text="Night Fare (Rs.)   " />
+
+                        <TextView
+                            android1:id="@+id/resultnight"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:text="15.00"
+                            android1:textAppearance="?android:attr/textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content"
+                        android1:gravity="center" >
+
+                        <Button
+                            android1:id="@+id/reset"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:onClick="reset"
+                            android1:padding="15dp"
+                            android1:text="RESET" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android1:id="@+id/tab2"
+            android1:layout_width="fill_parent"
+            android1:layout_height="fill_parent"
+            android1:orientation="vertical"
+             >
+            <ScrollView
+                android1:id="@+id/scrollView1"
+                android1:layout_width="match_parent"
+                android1:layout_height="match_parent"
+                android:background="@drawable/circle"
+                android1:fillViewport="true" >
+
+                <LinearLayout
+                    android1:layout_width="match_parent"
+                    android1:layout_height="match_parent"
+                    android1:orientation="vertical" >
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <TextView
+                            android1:id="@+id/vehicleNumber"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="match_parent"
+                            android1:gravity="center_horizontal|bottom|center_vertical|fill_vertical"
+                            android1:padding="5dp"
+                            android1:text="Vehicle Number:  MH"
+                            android1:textAppearance="?android:attr/textAppearanceMedium"
+                            android1:textSize="15dp" />
+
+                        <EditText
+                            android1:id="@+id/motorvehicleno_1"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight=".1"
+                            android1:hint="01"
+                            android1:inputType="number"
+                            android1:maxLength="2" >
+
+                            <requestFocus />
+                        </EditText>
+
+                        <EditText
+                            android1:id="@+id/motorvehicleno_2"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:hint="1234"
+                            android1:inputType="number"
+                            android1:maxLength="4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <TextView
+                            android1:id="@+id/vehicleType"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="match_parent"
+                            android1:layout_gravity="center_horizontal"
+                            android1:layout_weight="1"
+                            android1:gravity="center_vertical|center_horizontal"
+                            android1:padding="5dp"
+                            android1:text="Vehicle Type:"
+                            android1:textAppearance="?android:attr/textAppearanceMedium"
+                            android1:textSize="15dp" />
+
+                        <RadioGroup
+                            android1:id="@+id/Vehicle_Type_Group"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:gravity="center_horizontal"
+                            android1:orientation="horizontal" >
+
+                            <RadioButton
+                                android1:id="@+id/Vehicle_type_Auto"
+                                android1:layout_width="wrap_content"
+                                android1:layout_height="wrap_content"
+                                android1:checked="true"
+                                android1:text="Auto" />
+
+                            <RadioButton
+                                android1:id="@+id/Vehicle_type_Taxi"
+                                android1:layout_width="wrap_content"
+                                android1:layout_height="wrap_content"
+                                android1:text="Taxi" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <TextView
+                            android1:id="@+id/dateOfOccurence"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:text="Date Of Occurance:"
+                            android1:textAppearance="?android:attr/textAppearanceMedium"
+                            android1:textSize="15dp" />
+
+                        <EditText
+                            android1:id="@+id/dateofOccurrencevalue"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:inputType="date"
+                            android1:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <TextView
+                            android1:id="@+id/placeOfOccurrence"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:text="Place Of Occurence:"
+                            android1:textAppearance="?android:attr/textAppearanceMedium"
+                            android1:textSize="15dp" />
+
+                        <EditText
+                            android1:id="@+id/placeofOccurrencevalue"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1" />
+                    </LinearLayout>
+
+                    <TextView
+                        android1:id="@+id/textView3"
+                        android1:layout_width="wrap_content"
+                        android1:layout_height="wrap_content"
+                        android1:text="Nature of complaint:"
+                        android1:textAppearance="?android:attr/textAppearanceMedium"
+                        android1:textSize="15dp" />
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content"
+                        android1:layout_gravity="center|right" >
+
+                        <CheckBox
+                            android1:id="@+id/RefusedFare"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:text="Refused Fare"
+                            android1:textSize="15dp" />
+
+                        <CheckBox
+                            android1:id="@+id/ChargedExcess"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:text="Charged Excess"
+                            android1:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <CheckBox
+                            android1:id="@+id/indecentBehaviour"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:text="Indecent Behaviour"
+                            android1:textSize="15dp" />
+
+                        <CheckBox
+                            android1:id="@+id/FaultyBrokenMeter"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:text="Faulty/Broken Meter"
+                            android1:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <TextView
+                            android1:id="@+id/nameAndAddress"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:text="Full Name &amp; Address:"
+                            android1:textAppearance="?android:attr/textAppearanceMedium"
+                            android1:textSize="15dp" />
+
+                        <EditText
+                            android1:id="@+id/fullNameAndAddress"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:inputType="textMultiLine" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <TextView
+                            android1:id="@+id/Email"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:text="Email ID:"
+                            android1:textAppearance="?android:attr/textAppearanceMedium"
+                            android1:textSize="15dp" />
+
+                        <EditText
+                            android1:id="@+id/emailId"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:inputType="textEmailAddress" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <TextView
+                            android1:id="@+id/PhNo"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:text="Ph No:"
+                            android1:textAppearance="?android:attr/textAppearanceMedium"
+                            android1:textSize="15dp" />
+
+                        <EditText
+                            android1:id="@+id/PhoneNumber"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:ems="10"
+                            android1:inputType="phone|textPostalAddress" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content" >
+
+                        <Button
+                            android1:id="@+id/Submit"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:onClick="submitForm"
+                            android1:text="Submit" />
+
+                        <Button
+                            android1:id="@+id/Clear"
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_weight="1"
+                            android1:onClick="clearForm"
+                            android1:text="Clear" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <!-- TAB 1 ENDS -->
+
+
+        <!-- TAB 2 STARTS -->
+        <!-- TAB 2 ENDS -->
+        <!-- TAB 3 STARTS -->
+
+        <!-- TAB 3 ENDS -->
+
+        <LinearLayout
+            android1:id="@+id/tab3"
+            android1:layout_width="fill_parent"
+            android1:layout_height="fill_parent"
+            android1:orientation="vertical"
+             >
+            
+            <LinearLayout
+                android1:id="@+id/LinearLayoutads"
+                android1:layout_width="fill_parent"
+                android1:layout_height="wrap_content"
+                android1:gravity="fill_vertical|fill_horizontal"
+                android1:orientation="vertical" >
+            </LinearLayout>
+
+            <ScrollView
+                android1:id="@+id/scrollView2"
+                android1:layout_width="match_parent"
+                android1:layout_height="fill_parent"
+                android1:background="@drawable/circle"
+                android1:fillViewport="true" >
+
+                <LinearLayout
+                    android1:layout_width="match_parent"
+                    android1:layout_height="fill_parent"
+                    android1:orientation="vertical" >
+
+                 
+
+                    <TextView
+                        android1:id="@+id/textView1"
+                        android1:layout_width="fill_parent"
+                        android1:layout_height="fill_parent"
+                        android1:text="@string/help_content" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </FrameLayout>
+    </LinearLayout>
+
+</TabHost>
